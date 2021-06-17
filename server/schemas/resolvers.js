@@ -21,7 +21,7 @@ const resolvers = {
             return Thought.find(params).sort({ createdAt: -1 });
         },
 
-        thoughts: async (parent, {_id}) => {
+        thought: async (parent, {_id}) => {
             return Thought.findOne({ _id });
         },
 
@@ -56,7 +56,7 @@ const resolvers = {
                 throw new AuthenticationError('Incorrect credentials');
             }
 
-            const correctPw = await User.isCorrectPassword(password);
+            const correctPw = await user.isCorrectPassword(password);
 
             if (!correctPw) {
                 throw new AuthenticationError('Incorrect credentials');

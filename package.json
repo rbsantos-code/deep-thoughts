@@ -22,5 +22,8 @@
   "homepage": "https://github.com/rbsantos-code/deep-thoughts#readme",
   "devDependencies": {
     "concurrently": "^6.2.0"
+  },
+  "dependencies": {
+    "react-router-dom": "^5.2.0"
   }
 }
